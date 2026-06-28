@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Vector Educator
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--headerbar css-->
+    <link rel="stylesheet" href="/static/css/header.css">
+    <!--Navbar css-->
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/nav.html' %}
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content -->
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'components/footer.html' %}
+    
+</body>
+</html>

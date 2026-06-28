@@ -1,0 +1,737 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}?v=5">
+<script defer src="{% static 'js/home.js' %}?v=5"></script>
+  <!-- Dashboard Center Hero Slider (Premium Animated) -->
+  <section class="edu-hero" aria-label="Coaching programs hero slider">
+    <div class="edu-hero__bg" aria-hidden="true">
+      <div class="edu-hero__glow edu-hero__glow--a"></div>
+      <div class="edu-hero__glow edu-hero__glow--b"></div>
+      <div class="edu-hero__grid"></div>
+      <div class="edu-hero__vignette"></div>
+    </div>
+
+    <div class="edu-hero__inner">
+      <div class="edu-hero__particles" aria-hidden="true"></div>
+
+      <div class="edu-hero__carousel" data-edu-slider>
+        <div class="edu-hero__slides" data-edu-slides>
+          <!-- Slide 1: CBSE Excellence -->
+          <article class="edu-slide is-active" data-edu-slide>
+            <div class="edu-slide__media" aria-hidden="true">
+              <div class="edu-slide__parallax edu-slide__parallax--back" data-parallax data-depth="0.25">
+                <svg class="edu-slide__scene" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smart classroom scene">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#6d28d9" stop-opacity="0.55"/>
+                      <stop offset="1" stop-color="#0284c7" stop-opacity="0.35"/>
+                    </linearGradient>
+                    <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+                      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.18"/>
+                      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="1200" height="650" fill="url(#g1)"/>
+                  <g opacity="0.9">
+                    <path d="M120 420 C 220 320, 320 320, 420 420 S 620 520, 720 420 S 920 320, 1040 430" fill="none" stroke="#7c3aed" stroke-width="3" opacity="0.35"/>
+                    <path d="M80 460 C 220 360, 330 360, 470 460 S 690 580, 820 480 S 1020 370, 1140 470" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.35"/>
+                  </g>
+                  <g>
+                    <rect x="130" y="110" width="940" height="380" rx="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+                    <rect x="175" y="150" width="850" height="290" rx="18" fill="rgba(2,132,199,0.10)" stroke="rgba(251,191,36,0.22)"/>
+                    <g opacity="0.85">
+                      <rect x="210" y="190" width="210" height="120" rx="16" fill="rgba(255,255,255,0.09)"/>
+                      <rect x="445" y="190" width="310" height="120" rx="16" fill="rgba(255,255,255,0.07)"/>
+                      <rect x="770" y="190" width="180" height="120" rx="16" fill="rgba(255,255,255,0.06)"/>
+                      <rect x="210" y="325" width="740" height="70" rx="16" fill="url(#g2)" stroke="rgba(255,255,255,0.14)"/>
+                    </g>
+                  </g>
+
+                  <!-- Futuristic student silhouettes -->
+                  <g opacity="0.85" fill="#e0f2fe">
+                    <circle cx="330" cy="430" r="28" opacity="0.65"/>
+                    <rect x="296" y="455" width="68" height="90" rx="22" opacity="0.35"/>
+
+                    <circle cx="560" cy="410" r="26" opacity="0.6"/>
+                    <rect x="530" y="435" width="60" height="115" rx="24" opacity="0.32"/>
+
+                    <circle cx="780" cy="430" r="30" opacity="0.55"/>
+                    <rect x="747" y="460" width="66" height="88" rx="22" opacity="0.3"/>
+                  </g>
+
+                  <!-- Digital chalk strokes -->
+                  <g opacity="0.8" stroke-linecap="round">
+                    <path d="M260 520 L 420 450" stroke="#22d3ee" stroke-width="5" opacity="0.35"/>
+                    <path d="M420 560 L 620 470" stroke="#fbbf24" stroke-width="4" opacity="0.22"/>
+                    <path d="M620 560 L 940 420" stroke="#ffffff" stroke-width="3" opacity="0.18"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="edu-slide__parallax edu-slide__parallax--front" data-parallax data-depth="0.6">
+                <div class="edu-illustration" aria-hidden="true">
+                  <!-- Achievement badge + books (SVG inline) -->
+                  <svg viewBox="0 0 560 420" class="edu-illustration__svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#fbbf24"/>
+                        <stop offset="1" stop-color="#6d28d9"/>
+                      </linearGradient>
+                      <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="6" result="blur"/>
+                        <feMerge>
+                          <feMergeNode in="blur"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                    </defs>
+
+                    <g filter="url(#softGlow)">
+                      <path d="M280 35 L 340 80 L 420 95 L 382 170 L 390 255 L 310 236 L 232 268 L 230 175 L 170 95 L 250 80 Z" fill="url(#badge)" opacity="0.95"/>
+                      <circle cx="280" cy="170" r="76" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.28)"/>
+                      <path d="M250 180 L 270 200 L 320 150" fill="none" stroke="#EFFFFA" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+
+                    <g opacity="0.95">
+                      <g transform="translate(75,240) rotate(-6)">
+                        <rect x="0" y="0" width="110" height="150" rx="16" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="16" y="20" width="78" height="110" rx="12" fill="rgba(2,132,199,0.18)" stroke="rgba(34,211,238,0.30)"/>
+                      </g>
+                      <g transform="translate(210,245) rotate(5)">
+                        <rect x="0" y="0" width="130" height="165" rx="18" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="26" width="94" height="112" rx="14" fill="rgba(109,40,217,0.18)" stroke="rgba(124,58,237,0.30)"/>
+                      </g>
+                      <g transform="translate(350,250) rotate(-3)">
+                        <rect x="0" y="0" width="110" height="140" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="16" y="18" width="78" height="102" rx="12" fill="rgba(251,191,36,0.18)" stroke="rgba(251,191,36,0.30)"/>
+                      </g>
+                    </g>
+
+                    <!-- Math/Science lines -->
+                    <g opacity="0.8" stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round">
+                      <path d="M35 70 C 110 40, 165 80, 220 55" opacity="0.35"/>
+                      <path d="M350 70 C 430 35, 490 90, 540 55" opacity="0.25"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="edu-slide__scan" aria-hidden="true"></div>
+            </div>
+
+            <header class="edu-slide__content">
+              <div class="edu-pill" data-reveal="up">
+                <span class="edu-pill__dot"></span>
+                Premium AI Learning • CBSE 9–12
+              </div>
+
+              <h2 class="edu-title" data-reveal="up" data-delay="80">
+                Excellence in <span>CBSE</span> Classes 9–12
+              </h2>
+
+              <p class="edu-subtitle" data-reveal="up" data-delay="160">
+                Real-time doubt solving, smart classroom simulations, and mastery-focused practice designed to help every student score higher—confidently.
+              </p>
+
+              <div class="edu-badges" data-reveal="up" data-delay="220">
+                <span class="edu-badge">🏆 Board Toppers Track</span>
+                <span class="edu-badge">📚 Concept Mastery</span>
+                <span class="edu-badge">🧠 AI Personal Coaching</span>
+              </div>
+
+              <div class="edu-cta" data-reveal="up" data-delay="280">
+                <a class="edu-cta__primary" href="#">Explore CBSE Programs</a>
+                <a class="edu-cta__ghost" href="#">Get Free Demo</a>
+              </div>
+            </header>
+          </article>
+
+          <!-- Slide 2: Bihar Board Topper -->
+          <article class="edu-slide" data-edu-slide>
+            <div class="edu-slide__media" aria-hidden="true">
+              <div class="edu-slide__parallax edu-slide__parallax--back" data-parallax data-depth="0.25">
+                <svg class="edu-slide__scene" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bihar board excellence scene">
+                  <defs>
+                    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#0284c7" stop-opacity="0.45"/>
+                      <stop offset="1" stop-color="#6d28d9" stop-opacity="0.30"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="1200" height="650" fill="url(#b1)"/>
+                  <g opacity="0.75">
+                    <circle cx="210" cy="140" r="90" fill="rgba(251,191,36,0.14)"/>
+                    <circle cx="1010" cy="180" r="120" fill="rgba(34,211,238,0.10)"/>
+                    <rect x="140" y="110" width="920" height="420" rx="30" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.16)"/>
+                    <path d="M190 480 C 260 390, 380 410, 460 320 S 680 260, 760 330 S 930 450, 1030 350" fill="none" stroke="#fbbf24" stroke-width="3" opacity="0.32"/>
+                  </g>
+
+                  <!-- STEM/Board charts -->
+                  <g>
+                    <g transform="translate(220,180)">
+                      <rect width="260" height="250" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+                      <rect x="22" y="210" width="216" height="12" rx="6" fill="rgba(251,191,36,0.35)"/>
+                      <rect x="22" y="180" width="170" height="12" rx="6" fill="rgba(34,211,238,0.28)"/>
+                      <rect x="22" y="150" width="120" height="12" rx="6" fill="rgba(109,40,217,0.25)"/>
+                      <text x="24" y="46" fill="rgba(255,255,255,0.85)" font-size="24" font-family="Arial" font-weight="700">Topper</text>
+                      <text x="24" y="78" fill="rgba(255,255,255,0.55)" font-size="14" font-family="Arial">Analytics</text>
+                    </g>
+
+                    <!-- Student faces (stylized) -->
+                    <g transform="translate(620,210)" opacity="0.9" fill="#e0f2fe">
+                      <circle cx="80" cy="70" r="26" opacity="0.62"/>
+                      <rect x="52" y="96" width="56" height="105" rx="24" opacity="0.30"/>
+                      <circle cx="210" cy="50" r="24" opacity="0.55"/>
+                      <rect x="182" y="78" width="56" height="128" rx="24" opacity="0.28"/>
+                    </g>
+                  </g>
+
+                  <!-- Medals ribbon -->
+                  <g opacity="0.9">
+                    <path d="M360 560 C 420 520, 500 520, 560 560" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.22"/>
+                    <path d="M580 560 C 650 520, 760 520, 830 560" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.22"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="edu-slide__parallax edu-slide__parallax--front" data-parallax data-depth="0.65">
+                <div class="edu-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 560 420" class="edu-illustration__svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="med" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#fbbf24"/>
+                        <stop offset="1" stop-color="#0284c7"/>
+                      </linearGradient>
+                      <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="7" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      </filter>
+                    </defs>
+                    <g filter="url(#glow2)">
+                      <path d="M265 55 C 325 40, 420 70, 455 135 C 480 190, 455 265, 395 300 C 325 340, 245 335, 205 285 C 165 235, 170 140, 220 95 C 235 82, 247 62, 265 55 Z" fill="url(#med)" opacity="0.90"/>
+                      <path d="M240 185 L 275 225 L 350 145" fill="none" stroke="#EFFFFA" stroke-width="10" stroke-linecap="round"/>
+                      <text x="120" y="300" fill="rgba(255,255,255,0.70)" font-size="24" font-family="Arial" font-weight="700">Bihar</text>
+                      <text x="155" y="330" fill="rgba(255,255,255,0.45)" font-size="14" font-family="Arial">Topper Drive</text>
+                    </g>
+
+                    <!-- Books -->
+                    <g opacity="0.95">
+                      <g transform="translate(90,240) rotate(-2)">
+                        <rect x="0" y="0" width="120" height="160" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="16" y="22" width="88" height="116" rx="14" fill="rgba(34,211,238,0.18)" stroke="rgba(34,211,238,0.30)"/>
+                      </g>
+                      <g transform="translate(240,245) rotate(4)">
+                        <rect x="0" y="0" width="150" height="165" rx="20" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="26" width="114" height="120" rx="16" fill="rgba(109,40,217,0.18)" stroke="rgba(124,58,237,0.30)"/>
+                      </g>
+                      <g transform="translate(415,250) rotate(-3)">
+                        <rect x="0" y="0" width="110" height="140" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="16" y="18" width="78" height="102" rx="12" fill="rgba(251,191,36,0.18)" stroke="rgba(251,191,36,0.30)"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="edu-slide__scan" aria-hidden="true"></div>
+            </div>
+
+            <header class="edu-slide__content">
+              <div class="edu-pill" data-reveal="up">
+                <span class="edu-pill__dot"></span>
+                Bihar Board • Topper Mentorship
+              </div>
+
+              <h2 class="edu-title" data-reveal="up" data-delay="80">
+                Bihar Board <span>Topper</span> Preparation
+              </h2>
+
+              <p class="edu-subtitle" data-reveal="up" data-delay="160">
+                Targeted revision plans, smart practice sets, and performance dashboards that turn effort into top ranks.
+              </p>
+
+              <div class="edu-badges" data-reveal="up" data-delay="220">
+                <span class="edu-badge">📈 Rank-Boost Reports</span>
+                <span class="edu-badge">📝 Board Pattern Drills</span>
+                <span class="edu-badge">🎯 Weekly Goal System</span>
+              </div>
+
+              <div class="edu-cta" data-reveal="up" data-delay="280">
+                <a class="edu-cta__primary" href="#">Start Bihar Board Prep</a>
+                <a class="edu-cta__ghost" href="#">Ask a Question</a>
+              </div>
+            </header>
+          </article>
+
+          <!-- Slide 3: JEE -->
+          <article class="edu-slide" data-edu-slide>
+            <div class="edu-slide__media" aria-hidden="true">
+              <div class="edu-slide__parallax edu-slide__parallax--back" data-parallax data-depth="0.25">
+                <svg class="edu-slide__scene" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="JEE preparation scene">
+                  <defs>
+                    <linearGradient id="j1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#6d28d9" stop-opacity="0.45"/>
+                      <stop offset="1" stop-color="#0284c7" stop-opacity="0.25"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="1200" height="650" fill="url(#j1)"/>
+
+                  <!-- Engineering blueprint -->
+                  <g opacity="0.75" stroke="#22d3ee" stroke-width="2" fill="none">
+                    <path d="M170 510 L 400 330 L 630 470 L 860 290 L 1040 410" opacity="0.25"/>
+                    <path d="M260 550 L 470 390 L 710 520 L 930 360" opacity="0.18"/>
+                    <circle cx="400" cy="330" r="34" opacity="0.18"/>
+                    <circle cx="860" cy="290" r="28" opacity="0.14"/>
+                  </g>
+
+                  <g>
+                    <rect x="150" y="120" width="900" height="390" rx="30" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                    <g transform="translate(220,180)" opacity="0.95">
+                      <rect width="310" height="160" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+                      <rect x="340" width="340" height="160" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(251,191,36,0.25)"/>
+                      <rect y="190" width="680" height="85" rx="22" fill="rgba(34,211,238,0.10)" stroke="rgba(34,211,238,0.25)"/>
+                      <text x="28" y="52" fill="rgba(255,255,255,0.9)" font-size="26" font-family="Arial" font-weight="800">JEE</text>
+                      <text x="28" y="80" fill="rgba(255,255,255,0.5)" font-size="14" font-family="Arial">Advanced + Main</text>
+                    </g>
+
+                    <!-- Students -->
+                    <g transform="translate(620,260)" opacity="0.9" fill="#e0f2fe">
+                      <circle cx="70" cy="70" r="26" opacity="0.6"/>
+                      <rect x="45" y="95" width="50" height="110" rx="24" opacity="0.30"/>
+                      <circle cx="195" cy="55" r="24" opacity="0.52"/>
+                      <rect x="170" y="78" width="50" height="126" rx="24" opacity="0.28"/>
+                    </g>
+                  </g>
+
+                  <g opacity="0.8">
+                    <path d="M140 560 C 240 500, 320 600, 430 530 S 650 500, 760 560" fill="none" stroke="#fbbf24" stroke-width="4" opacity="0.20"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="edu-slide__parallax edu-slide__parallax--front" data-parallax data-depth="0.7">
+                <div class="edu-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 560 420" class="edu-illustration__svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="jee" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#0284c7"/>
+                        <stop offset="1" stop-color="#6d28d9"/>
+                      </linearGradient>
+                      <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="7" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      </filter>
+                    </defs>
+
+                    <g filter="url(#glow3)">
+                      <rect x="110" y="70" width="340" height="240" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+                      <path d="M170 250 L 240 170 L 290 220 L 350 150 L 410 230" stroke="url(#jee)" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="240" cy="170" r="14" fill="#22d3ee" opacity="0.9"/>
+                      <circle cx="350" cy="150" r="12" fill="#fbbf24" opacity="0.85"/>
+                      <text x="170" y="135" fill="rgba(255,255,255,0.75)" font-size="24" font-family="Arial" font-weight="800">Engineering</text>
+                    </g>
+
+                    <!-- Books -->
+                    <g opacity="0.95">
+                      <g transform="translate(70,255) rotate(-7)">
+                        <rect x="0" y="0" width="120" height="150" rx="18" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="22" width="84" height="110" rx="14" fill="rgba(109,40,217,0.18)" stroke="rgba(124,58,237,0.30)"/>
+                      </g>
+                      <g transform="translate(220,270) rotate(4)">
+                        <rect x="0" y="0" width="150" height="160" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="26" width="114" height="120" rx="16" fill="rgba(34,211,238,0.16)" stroke="rgba(34,211,238,0.30)"/>
+                      </g>
+                      <g transform="translate(395,270) rotate(-4)">
+                        <rect x="0" y="0" width="120" height="140" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="20" width="84" height="100" rx="14" fill="rgba(251,191,36,0.16)" stroke="rgba(251,191,36,0.30)"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="edu-slide__scan" aria-hidden="true"></div>
+            </div>
+
+            <header class="edu-slide__content">
+              <div class="edu-pill" data-reveal="up">
+                <span class="edu-pill__dot"></span>
+                JEE Preparation • Math + Physics + Chemistry
+              </div>
+
+              <h2 class="edu-title" data-reveal="up" data-delay="80">
+                JEE Advanced &amp; Main <span>Success</span>
+              </h2>
+
+              <p class="edu-subtitle" data-reveal="up" data-delay="160">
+                Formula-to-concept learning, timed practice, and AI-assisted error analysis for sharp, exam-ready performance.
+              </p>
+
+              <div class="edu-badges" data-reveal="up" data-delay="220">
+                <span class="edu-badge">⚡ Fast Problem Solving</span>
+                <span class="edu-badge">🧬 Concept-to-Question Flow</span>
+                <span class="edu-badge">📊 Smart Accuracy Tracking</span>
+              </div>
+
+              <div class="edu-cta" data-reveal="up" data-delay="280">
+                <a class="edu-cta__primary" href="#">Join JEE Program</a>
+                <a class="edu-cta__ghost" href="#">See Syllabus</a>
+              </div>
+            </header>
+          </article>
+
+          <!-- Slide 4: NEET -->
+          <article class="edu-slide" data-edu-slide>
+            <div class="edu-slide__media" aria-hidden="true">
+              <div class="edu-slide__parallax edu-slide__parallax--back" data-parallax data-depth="0.25">
+                <svg class="edu-slide__scene" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NEET medical excellence scene">
+                  <defs>
+                    <linearGradient id="n1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#0284c7" stop-opacity="0.30"/>
+                      <stop offset="1" stop-color="#6d28d9" stop-opacity="0.45"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="1200" height="650" fill="url(#n1)"/>
+
+                  <!-- Medical hologram -->
+                  <g opacity="0.85">
+                    <path d="M240 520 C 330 420, 470 440, 560 350 S 760 260, 860 340" fill="none" stroke="#22d3ee" stroke-width="3" opacity="0.35"/>
+                    <circle cx="420" cy="400" r="92" fill="rgba(251,191,36,0.12)"/>
+                    <circle cx="820" cy="360" r="110" fill="rgba(34,211,238,0.10)"/>
+
+                    <!-- Cross + heartbeat -->
+                    <g transform="translate(650,150)" fill="none" stroke-linecap="round" stroke-width="6">
+                      <path d="M40 60 V 150" stroke="#fbbf24" opacity="0.35"/>
+                      <path d="M-5 105 H 85" stroke="#fbbf24" opacity="0.35"/>
+                      <path d="M125 75 C 140 60, 165 60, 180 75 C 195 90, 195 115, 180 130 C 165 145, 140 145, 125 130 C 110 115, 110 90, 125 75 Z" stroke="#22d3ee" opacity="0.25"/>
+                      <path d="M-160 250 C -130 220, -100 250, -70 220 C -40 190, -10 220, 20 190" stroke="#ffffff" opacity="0.18"/>
+                    </g>
+                  </g>
+
+                  <!-- Students -->
+                  <g transform="translate(170,190)" opacity="0.9" fill="#e0f2fe">
+                    <circle cx="110" cy="130" r="26" opacity="0.60"/>
+                    <rect x="84" y="158" width="52" height="140" rx="24" opacity="0.28"/>
+                    <circle cx="250" cy="105" r="24" opacity="0.52"/>
+                    <rect x="224" y="132" width="52" height="167" rx="24" opacity="0.26"/>
+                  </g>
+
+                  <!-- Panel -->
+                  <rect x="140" y="120" width="920" height="390" rx="30" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                </svg>
+              </div>
+
+              <div class="edu-slide__parallax edu-slide__parallax--front" data-parallax data-depth="0.68">
+                <div class="edu-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 560 420" class="edu-illustration__svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="neo" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#fbbf24"/>
+                        <stop offset="1" stop-color="#0284c7"/>
+                      </linearGradient>
+                      <filter id="glow4" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="7" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      </filter>
+                    </defs>
+
+                    <g filter="url(#glow4)">
+                      <rect x="90" y="70" width="380" height="260" rx="26" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)"/>
+                      <path d="M270 145 C 280 130, 310 130, 320 145 C 335 165, 316 190, 300 205 C 285 220, 270 235, 270 255 C 270 235, 255 220, 240 205 C 224 190, 205 165, 220 145 C 230 130, 260 130, 270 145 Z" fill="rgba(251,191,36,0.22)" stroke="rgba(251,191,36,0.35)" stroke-width="3"/>
+                      <path d="M190 275 H 360" stroke="#22d3ee" stroke-width="6" opacity="0.35" stroke-linecap="round"/>
+                      <path d="M210 235 C 240 210, 260 215, 290 190 C 315 168, 345 180, 370 155" fill="none" stroke="url(#neo)" stroke-width="8" stroke-linecap="round" opacity="0.65"/>
+                      <text x="130" y="135" fill="rgba(255,255,255,0.75)" font-size="24" font-family="Arial" font-weight="800">Medical</text>
+                      <text x="130" y="160" fill="rgba(255,255,255,0.45)" font-size="14" font-family="Arial">NEET Excellence</text>
+                    </g>
+
+                    <!-- Books -->
+                    <g opacity="0.95">
+                      <g transform="translate(60,260) rotate(-6)">
+                        <rect x="0" y="0" width="120" height="150" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="20" width="84" height="112" rx="14" fill="rgba(34,211,238,0.16)" stroke="rgba(34,211,238,0.30)"/>
+                      </g>
+                      <g transform="translate(210,275) rotate(4)">
+                        <rect x="0" y="0" width="170" height="160" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="20" y="24" width="130" height="120" rx="16" fill="rgba(109,40,217,0.16)" stroke="rgba(124,58,237,0.30)"/>
+                      </g>
+                      <g transform="translate(405,278) rotate(-3)">
+                        <rect x="0" y="0" width="120" height="140" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="20" width="84" height="100" rx="14" fill="rgba(251,191,36,0.16)" stroke="rgba(251,191,36,0.30)"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="edu-slide__scan" aria-hidden="true"></div>
+            </div>
+
+            <header class="edu-slide__content">
+              <div class="edu-pill" data-reveal="up">
+                <span class="edu-pill__dot"></span>
+                NEET Preparation • Biology + Physics + Chemistry
+              </div>
+
+              <h2 class="edu-title" data-reveal="up" data-delay="80">
+                NEET Medical Career <span>Excellence</span>
+              </h2>
+
+              <p class="edu-subtitle" data-reveal="up" data-delay="160">
+                Molecular-level clarity, diagram-first learning, and AI-based performance insights—built to turn aspirations into admissions.
+              </p>
+
+              <div class="edu-badges" data-reveal="up" data-delay="220">
+                <span class="edu-badge">🧬 NCERT to NEET Mastery</span>
+                <span class="edu-badge">🩺 Medical Diagram Sprint</span>
+                <span class="edu-badge">🤖 Error Analytics</span>
+              </div>
+
+              <div class="edu-cta" data-reveal="up" data-delay="280">
+                <a class="edu-cta__primary" href="#">Join NEET Program</a>
+                <a class="edu-cta__ghost" href="#">Book a Call</a>
+              </div>
+            </header>
+          </article>
+
+          <!-- Slide 5: Olympiad -->
+          <article class="edu-slide" data-edu-slide>
+            <div class="edu-slide__media" aria-hidden="true">
+              <div class="edu-slide__parallax edu-slide__parallax--back" data-parallax data-depth="0.25">
+                <svg class="edu-slide__scene" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Olympiad preparation scene">
+                  <defs>
+                    <linearGradient id="o1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#0284c7" stop-opacity="0.25"/>
+                      <stop offset="1" stop-color="#6d28d9" stop-opacity="0.45"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="1200" height="650" fill="url(#o1)"/>
+
+                  <!-- Math / Physics / Logic grids -->
+                  <g opacity="0.75" stroke="#ffffff" stroke-width="2" fill="none">
+                    <path d="M120 480 L 240 380 L 360 480 L 480 380 L 600 480" opacity="0.12"/>
+                    <path d="M200 520 L 300 430 L 400 520 L 520 420 L 620 520" opacity="0.10"/>
+                    <path d="M620 480 L 740 380 L 860 480 L 980 380 L 1100 480" opacity="0.10"/>
+                  </g>
+
+                  <g opacity="0.85">
+                    <circle cx="260" cy="200" r="120" fill="rgba(251,191,36,0.12)"/>
+                    <circle cx="980" cy="210" r="140" fill="rgba(34,211,238,0.10)"/>
+                    <rect x="150" y="120" width="900" height="390" rx="30" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+                  </g>
+
+                  <!-- Trophy silhouette -->
+                  <g transform="translate(515,180)" opacity="0.9" fill="none" stroke-linecap="round">
+                    <path d="M60 0 C 40 40, 40 90, 60 130 C 90 190, 150 190, 180 130 C 200 90, 200 40, 180 0" stroke="#22d3ee" stroke-width="6" opacity="0.25"/>
+                    <path d="M90 140 L 150 140" stroke="#fbbf24" stroke-width="8" opacity="0.25"/>
+                    <path d="M80 175 C 110 195, 130 195, 160 175" stroke="#ffffff" stroke-width="4" opacity="0.18"/>
+                  </g>
+
+                  <!-- Students -->
+                  <g transform="translate(190,250)" opacity="0.9" fill="#e0f2fe">
+                    <circle cx="120" cy="120" r="26" opacity="0.6"/>
+                    <rect x="93" y="145" width="54" height="135" rx="24" opacity="0.28"/>
+                    <circle cx="260" cy="95" r="23" opacity="0.52"/>
+                    <rect x="235" y="120" width="50" height="165" rx="24" opacity="0.26"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="edu-slide__parallax edu-slide__parallax--front" data-parallax data-depth="0.7">
+                <div class="edu-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 560 420" class="edu-illustration__svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="ol" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#fbbf24"/>
+                        <stop offset="1" stop-color="#6d28d9"/>
+                      </linearGradient>
+                      <filter id="glow5" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="7" result="b"/>
+                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      </filter>
+                    </defs>
+                    <g filter="url(#glow5)">
+                      <path d="M280 60 C 360 60, 420 120, 420 200 C 420 280, 350 330, 280 330 C 210 330, 140 280, 140 200 C 140 120, 200 60, 280 60 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                      <path d="M230 160 L 260 135 L 280 155 L 305 125 L 340 170" fill="none" stroke="url(#ol)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+                      <path d="M190 245 H 370" stroke="#22d3ee" stroke-width="7" opacity="0.35" stroke-linecap="round"/>
+                      <text x="165" y="125" fill="rgba(255,255,255,0.75)" font-size="24" font-family="Arial" font-weight="800">Olympiad</text>
+                      <text x="175" y="150" fill="rgba(255,255,255,0.45)" font-size="14" font-family="Arial">Competitive Achievement</text>
+                    </g>
+
+                    <!-- Books -->
+                    <g opacity="0.95">
+                      <g transform="translate(85,260) rotate(-6)">
+                        <rect x="0" y="0" width="130" height="160" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="20" y="26" width="92" height="116" rx="16" fill="rgba(109,40,217,0.16)" stroke="rgba(124,58,237,0.30)"/>
+                      </g>
+                      <g transform="translate(245,275) rotate(4)">
+                        <rect x="0" y="0" width="150" height="165" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="20" y="24" width="110" height="125" rx="16" fill="rgba(34,211,238,0.14)" stroke="rgba(34,211,238,0.30)"/>
+                      </g>
+                      <g transform="translate(408,285) rotate(-3)">
+                        <rect x="0" y="0" width="120" height="150" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)"/>
+                        <rect x="18" y="24" width="84" height="110" rx="14" fill="rgba(251,191,36,0.14)" stroke="rgba(251,191,36,0.30)"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="edu-slide__scan" aria-hidden="true"></div>
+            </div>
+
+            <header class="edu-slide__content">
+              <div class="edu-pill" data-reveal="up">
+                <span class="edu-pill__dot"></span>
+                Olympiad Preparation • Logic + Science + Math
+              </div>
+
+              <h2 class="edu-title" data-reveal="up" data-delay="80">
+                Olympiad &amp; Competitive <span>Achievement</span>
+              </h2>
+
+              <p class="edu-subtitle" data-reveal="up" data-delay="160">
+                Challenge-grade practice, conceptual speed building, and creative reasoning—made for winners who love STEM.
+              </p>
+
+              <div class="edu-badges" data-reveal="up" data-delay="220">
+                <span class="edu-badge">🧠 Reasoning Boost</span>
+                <span class="edu-badge">🔬 Science Discovery</span>
+                <span class="edu-badge">📐 Math Precision</span>
+              </div>
+
+              <div class="edu-cta" data-reveal="up" data-delay="280">
+                <a class="edu-cta__primary" href="#">Start Olympiad Prep</a>
+                <a class="edu-cta__ghost" href="#">Take a Sample Test</a>
+              </div>
+            </header>
+          </article>
+        </div>
+
+        <!-- Controls -->
+        <div class="edu-hero__controls" aria-label="Slider controls">
+          <button class="edu-nav" type="button" data-edu-prev aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="edu-dots" data-edu-dots aria-label="Slide navigation dots"></div>
+          <button class="edu-nav" type="button" data-edu-next aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading hint for screen readers -->
+      <div class="sr-only" aria-live="polite">Hero slider loaded.</div>
+    </div>
+  </section>
+
+   <!-- <-- ==================== KEY FEATURES SECTION ==================== -->
+<section class="features-section">
+    <div class="section-container">
+        <h2 class="section-heading">Why Choose <span>Vector Educator?</span></h2>
+        <p class="section-subheading">We combine top-tier faculty with cutting-edge technology to give you the perfect learning edge.</p>
+        
+        <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card">
+                <div class="feature-icon bg-cyan">📊</div>
+                <h3>Smart Analytics</h3>
+                <p>Visual graphs and AI-powered data to track your weak areas and eliminate repetitive mistakes.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="feature-card">
+                <div class="feature-icon bg-blue">👨‍🏫</div>
+                <h3>Expert Faculty</h3>
+                <p>Learn directly from India’s top educators, IITians, and NITians who know the exact path to success.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="feature-card">
+                <div class="feature-icon bg-yellow">⏱️</div>
+                <h3>Timed Practice Tests</h3>
+                <p>Real-time mock exams simulated perfectly to match the latest JEE, NEET, and Board patterns.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== METHODOLOGY SECTION (HOW IT WORKS) ==================== -->
+<section class="methodology-section">
+    <div class="section-container">
+        <h2 class="section-heading">Our <span>Learning Methodology</span></h2>
+        <p class="section-subheading">A proven 3-step formula designed to take you from a basic learner to an expert topper.</p>
+        
+        <div class="timeline-container">
+            <div class="timeline-step">
+                <div class="step-number">1</div>
+                <h3>Learn</h3>
+                <p>Attend interactive live and recorded classes covering deep formula-to-concept clarity.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">2</div>
+                <h3>Practice</h3>
+                <p>Solve high-yield adaptive quizzes, daily practice problems (DPPs), and curated modules.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">3</div>
+                <h3>Analyze</h3>
+                <p>Get instant AI-assisted error reports to fix gaps in your concept-to-question flow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== POPULAR COURSES SECTION ==================== -->
+<section class="courses-section">
+    <div class="section-container">
+        <h2 class="section-heading">Our <span>Popular Programs</span></h2>
+        <p class="section-subheading">Choose the targeted course tailored perfectly for your target exams.</p>
+        
+        <div class="courses-grid">
+            <!-- Course 1 -->
+            <div class="course-card">
+                <div class="course-tag">Most Popular</div>
+                <h3>JEE Main & Advanced</h3>
+                <p class="course-class">Class 11, 12 & Droppers</p>
+                <p class="course-desc">Rigorous engineering prep focused on advanced problem-solving techniques.</p>
+                <div class="course-footer">
+                    <button class="btn-primary-yellow">Enroll Now</button>
+                    <a href="#" class="btn-link">See Syllabus →</a>
+                </div>
+            </div>
+            <!-- Course 2 -->
+            <div class="course-card">
+                <div class="course-tag">Medical Focused</div>
+                <h3>NEET Excellence</h3>
+                <p class="course-class">Class 11, 12 & Target Batches</p>
+                <p class="course-desc">NCERT-to-NEET mastery with detailed biology diagram sprints and physics tricks.</p>
+                <div class="course-footer">
+                    <button class="btn-primary-yellow">Enroll Now</button>
+                    <a href="#" class="btn-link">See Syllabus →</a>
+                </div>
+            </div>
+            <!-- Course 3 -->
+            <div class="course-card">
+                <div class="course-tag">Foundations</div>
+                <h3>JEE Foundation & Board</h3>
+                <p class="course-class">Class 9th, 10th & Bihar Board</p>
+                <p class="course-desc">Building rock-solid fundamental concepts to ace both state board and future exams.</p>
+                <div class="course-footer">
+                    <button class="btn-primary-yellow">Enroll Now</button>
+                    <a href="#" class="btn-link">See Syllabus →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+  <script defer src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+
