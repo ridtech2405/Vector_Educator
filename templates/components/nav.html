@@ -7,7 +7,7 @@
       <li><a href="{% url 'Home:Home' %}" class="active">Home</a></li>
       <li><a href="#">Courses</a></li>
       <li><a href="#">Faculty</a></li>
-      <li><a href="#">Attendance</a></li>
+      <li><a href="/attendance/">Attendance</a></li>
       <li><a href="{% url 'about:about' %}">About</a></li>
     </ul>
 
@@ -25,6 +25,7 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="{% url 'Home:Home' %}" class="active"><i class="fas fa-home"></i> Home</a>
+    <a href="/attendance/"><i class="fas fa-clipboard-check"></i> Attendance</a>
     <a href="#"><i class="fas fa-book"></i> Courses</a>
     <a href="#"><i class="fas fa-users"></i> Faculty</a>
     <a href="#"><i class="fas fa-phone"></i> Contact</a>
