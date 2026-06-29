@@ -1,0 +1,468 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'student_attendance/css/student.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="attendance-page">
+
+    <!-- ===================== HEADER ===================== -->
+
+    <div class="page-top">
+
+        <div>
+            <h2>Student Attendance</h2>
+            <p>Manage daily attendance of students</p>
+        </div>
+
+        <div class="today-date">
+            <label>Today's Date</label>
+            <input type="date" id="attendanceDate">
+        </div>
+
+    </div>
+
+
+    <!-- ===================== DASHBOARD CARDS ===================== -->
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card total">
+
+            <div class="icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <div class="details">
+                <h4>Total Students</h4>
+                <h2 id="totalStudents">120</h2>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card present">
+
+            <div class="icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="details">
+                <h4>Present</h4>
+                <h2 id="presentCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card absent">
+
+            <div class="icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <div class="details">
+                <h4>Absent</h4>
+                <h2 id="absentCount">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card leave">
+
+            <div class="icon">
+                <i class="fa-solid fa-person-walking-arrow-right"></i>
+            </div>
+
+            <div class="details">
+                <h4>Leave</h4>
+                <h2 id="leaveCount">0</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================== FILTER SECTION ===================== -->
+
+    <div class="filter-box">
+
+        <div class="filter-grid">
+
+            <div class="input-group">
+
+                <label>Class</label>
+
+                <select>
+
+                    <option>Select Class</option>
+
+                    <option>Class 9</option>
+
+                    <option>Class 10</option>
+
+                    <option>Class 11</option>
+
+                    <option>Class 12</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>Section</label>
+
+                <select>
+
+                    <option>Select Section</option>
+
+                    <option>A</option>
+
+                    <option>B</option>
+
+                    <option>C</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>Subject</label>
+
+                <select>
+
+                    <option>Select Subject</option>
+
+                    <option>Mathematics</option>
+
+                    <option>Science</option>
+
+                    <option>English</option>
+
+                    <option>Computer</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>Search Student</label>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or roll number">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================== ATTENDANCE TABLE ===================== -->
+
+    <div class="table-container">
+
+        <table class="attendance-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Photo</th>
+
+                    <th>Roll No</th>
+
+                    <th>Student Name</th>
+
+                    <th>Present</th>
+
+                    <th>Absent</th>
+
+                    <th>Leave</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+                <!-- Student 1 -->
+<tr>
+    <td>
+        <div class="student-avatar">RS</div>
+    </td>
+    <td>101</td>
+    <td>Rahul Sharma</td>
+
+    <td>
+        <input type="radio" name="student1" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student1" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student1" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 2 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">AS</div>
+    </td>
+
+    <td>102</td>
+
+    <td>Aman Singh</td>
+
+    <td>
+        <input type="radio" name="student2" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student2" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student2" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 3 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">PP</div>
+    </td>
+
+    <td>103</td>
+
+    <td>Priya Patel</td>
+
+    <td>
+        <input type="radio" name="student3" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student3" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student3" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 4 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">NG</div>
+    </td>
+
+    <td>104</td>
+
+    <td>Neha Gupta</td>
+
+    <td>
+        <input type="radio" name="student4" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student4" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student4" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 5 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">VK</div>
+    </td>
+
+    <td>105</td>
+
+    <td>Vikas Kumar</td>
+
+    <td>
+        <input type="radio" name="student5" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student5" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student5" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 6 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">SK</div>
+    </td>
+
+    <td>106</td>
+
+    <td>Sachin Kumar</td>
+
+    <td>
+        <input type="radio" name="student6" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student6" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student6" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 7 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">AK</div>
+    </td>
+
+    <td>107</td>
+
+    <td>Anjali Kumari</td>
+
+    <td>
+        <input type="radio" name="student7" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student7" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student7" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+<!-- Student 8 -->
+
+<tr>
+
+    <td>
+        <div class="student-avatar">RD</div>
+    </td>
+
+    <td>108</td>
+
+    <td>Rohit Dubey</td>
+
+    <td>
+        <input type="radio" name="student8" class="attendance present-radio" value="Present" checked>
+    </td>
+
+    <td>
+        <input type="radio" name="student8" class="attendance absent-radio" value="Absent">
+    </td>
+
+    <td>
+        <input type="radio" name="student8" class="attendance leave-radio" value="Leave">
+    </td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Summary -->
+
+<div class="attendance-summary">
+
+    <div class="summary-box">
+
+        <div>
+            <h3>Attendance Summary</h3>
+            <p>Review today's attendance before saving.</p>
+        </div>
+
+        <div class="summary-counts">
+            <span class="present-badge">
+                Present :
+                <strong id="presentTotal">0</strong>
+            </span>
+
+            <span class="absent-badge">
+                Absent :
+                <strong id="absentTotal">0</strong>
+            </span>
+
+            <span class="leave-badge">
+                Leave :
+                <strong id="leaveTotal">0</strong>
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="button-group">
+
+    <button type="button" class="reset-btn" id="resetAttendance">
+        Reset
+    </button>
+
+    <button type="button" class="save-btn" id="saveAttendance">
+        Save Attendance
+    </button>
+
+</div>
+
+</div>
+
+<script src="{% static 'student_attendance/js/student.js' %}"></script>
+
+{% endblock %}

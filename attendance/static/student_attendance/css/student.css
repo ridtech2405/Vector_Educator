@@ -1,0 +1,863 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* ===========================
+   MAIN PAGE
+=========================== */
+
+.attendance-page{
+
+    padding:30px;
+
+    animation:fadeIn .5s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.page-top h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+.page-top p{
+
+    color:#64748b;
+
+    margin-top:6px;
+
+}
+
+.today-date{
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.today-date label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#475569;
+
+    font-size:14px;
+
+}
+
+.today-date input{
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.dashboard-card .icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:white;
+
+}
+
+.dashboard-card h4{
+
+    font-size:15px;
+
+    color:#64748b;
+
+    font-weight:500;
+
+}
+
+.dashboard-card h2{
+
+    font-size:34px;
+
+    margin-top:8px;
+
+    color:#0f172a;
+
+}
+
+/* Card Colors */
+
+.total .icon{
+
+    background:#2563eb;
+
+}
+
+.present .icon{
+
+    background:#22c55e;
+
+}
+
+.absent .icon{
+
+    background:#ef4444;
+
+}
+
+.leave .icon{
+
+    background:#f59e0b;
+
+}
+
+/* ===========================
+   FILTER BOX
+=========================== */
+
+.filter-box{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:35px;
+
+}
+
+.filter-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:22px;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    font-size:14px;
+
+    color:#475569;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group input,
+
+.input-group select{
+
+    height:48px;
+
+    border:1px solid #dbe4ee;
+
+    border-radius:12px;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    outline:none;
+
+    background:white;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-container{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.attendance-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.attendance-table thead{
+
+    background:#2563eb;
+
+}
+
+.attendance-table thead th{
+
+    color:white;
+
+    padding:18px;
+
+    font-size:15px;
+
+    text-align:center;
+
+}
+
+.attendance-table tbody td{
+
+    padding:18px;
+
+    text-align:center;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.attendance-table tbody tr{
+
+    transition:.25s;
+
+}
+
+.attendance-table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* Student Avatar */
+
+.student-avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    margin:auto;
+
+}
+/* =====================================
+   RADIO BUTTONS
+===================================== */
+
+.attendance-table input[type="radio"]{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+    accent-color:#2563eb;
+    transform:scale(1.15);
+}
+
+/* =====================================
+   ATTENDANCE SUMMARY
+===================================== */
+
+.attendance-summary{
+
+    margin-top:35px;
+
+}
+
+.summary-box{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.summary-box h3{
+
+    color:#0f172a;
+
+    margin-bottom:6px;
+
+}
+
+.summary-box p{
+
+    color:#64748b;
+
+}
+
+.summary-counts{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.summary-counts span{
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.present-badge{
+
+    background:#22c55e;
+
+}
+
+.absent-badge{
+
+    background:#ef4444;
+
+}
+
+.leave-badge{
+
+    background:#f59e0b;
+
+}
+
+/* =====================================
+   BUTTON SECTION
+===================================== */
+
+.button-group{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:20px;
+
+}
+
+.button-group button{
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.reset-btn{
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+}
+
+.reset-btn:hover{
+
+    background:#cbd5e1;
+
+    transform:translateY(-3px);
+
+}
+
+.save-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.save-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
+
+}
+
+/* =====================================
+   CUSTOM SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#94a3b8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+
+}
+
+/* =====================================
+   TABLE RESPONSIVE
+===================================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+.table-container::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+/* =====================================
+   ROW HOVER
+===================================== */
+
+.attendance-table tbody tr:hover{
+
+    background:#eff6ff;
+
+}
+
+.attendance-table tbody tr{
+
+    transition:.3s ease;
+
+}
+
+/* =====================================
+   INPUT PLACEHOLDER
+===================================== */
+
+input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+.dashboard-card{
+
+    animation:cardAnimation .6s ease;
+
+}
+
+@keyframes cardAnimation{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.filter-box{
+
+    animation:fadeFilter .7s ease;
+
+}
+
+@keyframes fadeFilter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.table-container{
+
+    animation:tableAnimation .8s ease;
+
+}
+
+@keyframes tableAnimation{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media(max-width:1200px){
+
+.dashboard-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.page-top{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.summary-box{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.button-group{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.attendance-page{
+
+padding:18px;
+
+}
+
+.dashboard-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.filter-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.page-top h2{
+
+font-size:28px;
+
+}
+
+.attendance-table{
+
+min-width:900px;
+
+}
+
+.summary-counts{
+
+width:100%;
+
+justify-content:space-between;
+
+}
+
+.button-group{
+
+flex-direction:column;
+
+}
+
+.button-group button{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.today-date{
+
+width:100%;
+
+}
+
+.today-date input{
+
+width:100%;
+
+}
+
+.summary-counts{
+
+flex-direction:column;
+
+}
+
+.summary-counts span{
+
+text-align:center;
+
+}
+
+.student-avatar{
+
+width:38px;
+
+height:38px;
+
+font-size:14px;
+
+}
+
+}
+
+/* =====================================
+   END OF CSS
+===================================== */
