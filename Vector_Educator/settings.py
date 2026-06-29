@@ -92,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "Vector_Educator", 
         'USER': 'postgres',
-        'PASSWORD': 'RIDinternGulab',
+        'PASSWORD': 'postgres123',
         'HOST': '127.0.0.1',
         'PORT': '5432',
 
