@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE Portal - Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+overflow-x:hidden;
+}
+
+/* Navbar */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0D47A1;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#fff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.login-btn{
+background:#FF9800;
+padding:10px 20px;
+border-radius:8px;
+}
+
+.login-btn:hover{
+background:#E65100;
+color:white;
+}
+
+/* Hero */
+
+.hero{
+padding:140px 8% 80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:60px;
+line-height:1.3;
+color:#0D47A1;
+}
+
+.hero-text span{
+color:#FF9800;
+}
+
+.hero-text p{
+font-size:18px;
+margin:25px 0;
+color:#555;
+line-height:1.8;
+}
+
+.buttons a{
+display:inline-block;
+padding:15px 35px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+margin-right:15px;
+transition:.3s;
+}
+
+.btn1{
+background:#1565C0;
+color:white;
+}
+
+.btn2{
+background:#FF9800;
+color:white;
+}
+
+.btn1:hover{
+background:#0D47A1;
+}
+
+.btn2:hover{
+background:#E65100;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:90%;
+max-width:520px;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* About */
+
+.about{
+
+padding:80px 8%;
+background:white;
+
+}
+
+.section-title{
+
+text-align:center;
+font-size:40px;
+color:#0D47A1;
+margin-bottom:20px;
+
+}
+
+.about p{
+
+text-align:center;
+font-size:18px;
+color:#555;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+nav a{
+
+display:inline-block;
+margin:10px;
+
+}
+
+.hero{
+
+flex-direction:column-reverse;
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:40px;
+
+}
+
+.hero-image img{
+
+width:80%;
+margin-bottom:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+🎓 JEE Portal
+
+</div>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="mock test.html">Mock Test</a>
+
+<a href="pyq.html">PYQ</a>
+
+<a href="performance.html">Performance</a>
+
+<a href="profile.html">Profile</a>
+
+<a href="settings.html">Settings</a>
+
+<a href="login.html" class="login-btn">Login</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Crack <span>JEE Main</span><br>
+
+& <span>JEE Advanced</span>
+
+With Smart Preparation
+
+</h1>
+
+<p>
+
+Prepare with India's Smartest Learning Platform.
+Practice Mock Tests, PYQs, Daily Quiz,
+Performance Analytics and AI Powered Study Plan.
+
+</p>
+
+<div class="buttons">
+
+<a href="index.html" class="btn1">Get Started</a>
+
+<a href="mock test.html" class="btn2">Start Mock Test</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Student">
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2 class="section-title">
+
+Why Choose Our Portal?
+
+</h2>
+
+<p>
+
+Our JEE Preparation Portal provides complete study material,
+video lectures, mock tests, previous year papers,
+performance analytics and personalized learning to help
+students crack JEE Main and JEE Advanced with confidence.
+
+</p>
+
+</section>
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2 class="section-title">Our Features</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+<i class="fas fa-book-open"></i>
+<h3>Study Material</h3>
+<p>Complete Notes for Physics, Chemistry and Mathematics.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-laptop-code"></i>
+<h3>Mock Tests</h3>
+<p>Full syllabus and chapter-wise tests based on latest JEE pattern.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-file-alt"></i>
+<h3>Previous Year Papers</h3>
+<p>10+ years solved PYQs with detailed solutions.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-chart-line"></i>
+<h3>Performance</h3>
+<p>Track your progress with detailed analytics.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= COURSES ================= -->
+
+<section class="courses">
+
+<h2 class="section-title">Popular Courses</h2>
+
+<div class="course-container">
+
+<div class="course-card">
+
+<h3>Physics Master Course</h3>
+
+<p>
+Mechanics, Thermodynamics,
+Modern Physics,
+Electrodynamics and More.
+</p>
+
+<a href="register.html">Enroll Now</a>
+
+</div>
+
+<div class="course-card">
+
+<h3>Chemistry Master Course</h3>
+
+<p>
+Organic, Physical,
+Inorganic Chemistry
+with Practice Questions.
+</p>
+
+<a href="register.html">Enroll Now</a>
+
+</div>
+
+<div class="course-card">
+
+<h3>Mathematics Master Course</h3>
+
+<p>
+Calculus,
+Algebra,
+Coordinate Geometry,
+Vectors and 3D.
+</p>
+
+<a href="register.html">Enroll Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MOCK TEST ================= -->
+
+<section class="mock">
+
+<h2 class="section-title">
+
+Online Mock Tests
+
+</h2>
+
+<div class="mock-container">
+
+<div class="mock-card">
+
+<h3>JEE Main Mock Test</h3>
+
+<p>Questions : 90</p>
+
+<p>Duration : 3 Hours</p>
+
+<p>Total Marks : 300</p>
+
+<a href="mock test.html">Start Test</a>
+
+</div>
+
+<div class="mock-card">
+
+<h3>JEE Advanced Mock Test</h3>
+
+<p>Questions : 54</p>
+
+<p>Duration : 3 Hours</p>
+
+<p>Total Marks : 360</p>
+
+<a href="mock test.html">Start Test</a>
+
+</div>
+
+<div class="mock-card">
+
+<h3>Chapter Wise Test</h3>
+
+<p>Physics</p>
+
+<p>Chemistry</p>
+
+<p>Mathematics</p>
+
+<a href="performance.html">Practice</a>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* FEATURES */
+
+.features{
+
+padding:80px 8%;
+background:#F8FAFF;
+
+}
+
+.feature-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+
+}
+
+.feature-card{
+
+background:#fff;
+padding:30px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.feature-card i{
+
+font-size:45px;
+color:#1565C0;
+margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+margin-bottom:10px;
+color:#0D47A1;
+
+}
+
+.feature-card p{
+
+color:#666;
+line-height:1.7;
+
+}
+
+/* COURSES */
+
+.courses{
+
+padding:80px 8%;
+background:white;
+
+}
+
+.course-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.course-card{
+
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.course-card:hover{
+
+transform:scale(1.03);
+
+}
+
+.course-card h3{
+
+color:#0D47A1;
+margin-bottom:15px;
+
+}
+
+.course-card p{
+
+line-height:1.8;
+color:#555;
+
+}
+
+.course-card a{
+
+display:inline-block;
+margin-top:20px;
+background:#1565C0;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+
+}
+
+.course-card a:hover{
+
+background:#0D47A1;
+
+}
+
+/* MOCK TEST */
+
+.mock{
+
+padding:80px 8%;
+background:#F8FAFF;
+
+}
+
+.mock-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.mock-card{
+
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.mock-card h3{
+
+color:#0D47A1;
+margin-bottom:20px;
+
+}
+
+.mock-card p{
+
+margin:12px 0;
+color:#555;
+
+}
+
+.mock-card a{
+
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#FF9800;
+color:white;
+border-radius:8px;
+text-decoration:none;
+
+}
+
+.mock-card a:hover{
+
+background:#E65100;
+
+}
+
+</style>
+<!-- ===================== PYQ SECTION ===================== -->
+
+<section class="pyq">
+
+<h2 class="section-title">Previous Year Questions (PYQ)</h2>
+
+<div class="pyq-container">
+
+<div class="pyq-card">
+
+<h3>Physics PYQs</h3>
+
+<p>2003 - 2025 Solved Questions</p>
+
+<a href="pyq.html">View Questions</a>
+
+</div>
+
+<div class="pyq-card">
+
+<h3>Chemistry PYQs</h3>
+
+<p>2003 - 2025 Solved Questions</p>
+
+<a href="pyq.html">View Questions</a>
+
+</div>
+
+<div class="pyq-card">
+
+<h3>Mathematics PYQs</h3>
+
+<p>2003 - 2025 Solved Questions</p>
+
+<a href="pyq.html">View Questions</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== STATISTICS ===================== -->
+
+<section class="stats">
+
+<h2 class="section-title">Our Achievements</h2>
+
+<div class="stats-container">
+
+<div class="stat-box">
+<h1>50K+</h1>
+<p>Students</p>
+</div>
+
+<div class="stat-box">
+<h1>1000+</h1>
+<p>Mock Tests</p>
+</div>
+
+<div class="stat-box">
+<h1>20K+</h1>
+<p>PYQs</p>
+</div>
+
+<div class="stat-box">
+<h1>95%</h1>
+<p>Success Rate</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== STUDENT REVIEWS ===================== -->
+
+<section class="reviews">
+
+<h2 class="section-title">Student Reviews</h2>
+
+<div class="review-container">
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=12">
+
+<h3>Rahul Sharma</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+This portal helped me improve my rank with mock tests and PYQs.
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=15">
+
+<h3>Anjali Verma</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+Performance dashboard is amazing and easy to understand.
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://i.pravatar.cc/100?img=20">
+
+<h3>Aman Gupta</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+Best platform for JEE Main & Advanced preparation.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* ===================== PYQ ===================== */
+
+.pyq{
+
+padding:80px 8%;
+background:#fff;
+
+}
+
+.pyq-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+
+}
+
+.pyq-card{
+
+background:#f8f9ff;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.pyq-card h3{
+
+color:#0D47A1;
+margin-bottom:15px;
+
+}
+
+.pyq-card a{
+
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#1565C0;
+color:white;
+text-decoration:none;
+border-radius:8px;
+
+}
+
+.pyq-card a:hover{
+
+background:#0D47A1;
+
+}
+
+/* ===================== STATS ===================== */
+
+.stats{
+
+padding:80px 8%;
+background:#1565C0;
+color:white;
+
+}
+
+.stats-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.stat-box{
+
+background:white;
+color:#1565C0;
+padding:30px;
+text-align:center;
+border-radius:15px;
+
+}
+
+.stat-box h1{
+
+font-size:45px;
+
+}
+
+/* ===================== REVIEWS ===================== */
+
+.reviews{
+
+padding:80px 8%;
+background:#f5f7fb;
+
+}
+
+.review-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.review-card{
+
+background:white;
+padding:30px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.review-card img{
+
+width:90px;
+height:90px;
+border-radius:50%;
+margin-bottom:20px;
+
+}
+
+.review-card h3{
+
+color:#0D47A1;
+
+}
+
+.review-card p{
+
+margin-top:10px;
+color:#555;
+line-height:1.7;
+
+}
+
+</style>
+<!-- ================= FAQ ================= -->
+
+<section class="faq">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq-box">
+
+<h3>❓ What is JEE Main?</h3>
+<p>JEE Main is the national level engineering entrance examination conducted for admission into NITs, IIITs and other engineering institutes.</p>
+
+<h3>❓ What is JEE Advanced?</h3>
+<p>JEE Advanced is conducted for admission into IITs and is attempted after qualifying JEE Main.</p>
+
+<h3>❓ Are Mock Tests Free?</h3>
+<p>Yes, chapter-wise and full syllabus mock tests are available for students.</p>
+
+<h3>❓ Can I Track My Performance?</h3>
+<p>Yes, you can view your score, accuracy, rank and progress in the dashboard.</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>🎓 JEE Preparation Portal</h2>
+
+<p>
+Your Complete Learning Platform for JEE Main & JEE Advanced.
+</p>
+
+<div class="social">
+
+<a href="facebook.html"><i class="fab fa-facebook"></i></a>
+
+<a href="instagram.html"><i class="fab fa-instagram"></i></a>
+
+<a href="youtube.html"><i class="fab fa-youtube"></i></a>
+
+<a href="linkedin.html"><i class="fab fa-linkedin"></i></a>
+
+<a href="github.html"><i class="fab fa-github"></i></a>
+
+</div>
+
+<p class="copy">
+
+© 2026 JEE Preparation Portal |
+
+</p>
+
+</footer>
+
+<style>
+
+/* FAQ */
+
+.faq{
+
+padding:80px 8%;
+background:white;
+
+}
+
+.faq-box{
+
+max-width:900px;
+margin:auto;
+background:#F8FAFF;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.faq-box h3{
+
+margin-top:20px;
+color:#0D47A1;
+
+}
+
+.faq-box p{
+
+margin-top:10px;
+line-height:1.8;
+color:#555;
+
+}
+
+/* Contact */
+
+.contact{
+
+padding:80px 8%;
+background:#f5f7fb;
+
+}
+
+.contact-box{
+
+max-width:700px;
+margin:auto;
+
+}
+
+.contact-box input,
+.contact-box textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+
+}
+
+.contact-box textarea{
+
+height:150px;
+resize:none;
+
+}
+
+.contact-box button{
+
+width:100%;
+padding:15px;
+background:#1565C0;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+.contact-box button:hover{
+
+background:#0D47A1;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#0D47A1;
+color:white;
+text-align:center;
+padding:50px 20px;
+
+}
+
+footer h2{
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+margin-top:10px;
+
+}
+
+.social{
+
+margin:25px 0;
+
+}
+
+.social a{
+
+display:inline-block;
+width:45px;
+height:45px;
+line-height:45px;
+background:white;
+color:#1565C0;
+border-radius:50%;
+margin:0 8px;
+font-size:20px;
+transition:.3s;
+
+}
+
+.social a:hover{
+
+background:#FF9800;
+color:white;
+transform:translateY(-5px);
+
+}
+
+.copy{
+
+margin-top:20px;
+font-size:15px;
+
+}
+
+</style>
+
+<script>
+
+console.log("JEE Portal Loaded Successfully");
+
+const cards=document.querySelectorAll(".feature-card,.course-card,.mock-card,.pyq-card,.review-card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

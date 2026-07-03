@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+header{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    font-size:32px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>JEE Preparation Dashboard</h1>
+</header>
+
+<section class="dashboard">
+
+    <div class="card">
+        <h2>Physics</h2>
+        <p>25 Chapters Available</p>
+        <button class="btn">Open</button>
+    </div>
+
+    <div class="card">
+        <h2>Chemistry</h2>
+        <p>30 Chapters Available</p>
+        <button class="btn">Open</button>
+    </div>
+
+    <div class="card">
+        <h2>Mathematics</h2>
+        <p>28 Chapters Available</p>
+        <button class="btn">Open</button>
+    </div>
+
+    <div class="card">
+        <h2>Mock Tests</h2>
+        <p>50+ Practice Tests</p>
+        <button class="btn">Start Test</button>
+    </div>
+
+    <div class="card">
+        <h2>Progress</h2>
+        <p>Track Your Performance</p>
+        <button class="btn">View</button>
+    </div>
+
+    <div class="card">
+        <h2>Notes</h2>
+        <p>Study Notes & PDFs</p>
+        <button class="btn">Download</button>
+    </div>
+
+</section>
+
+<div class="footer">
+    © 2026 JEE Preparation App
+</div>
+
+</body>
+</html>

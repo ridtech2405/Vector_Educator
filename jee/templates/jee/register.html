@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE Portal - Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1565C0,#42A5F5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.register-box{
+    width:100%;
+    max-width:480px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.logo{
+    text-align:center;
+    font-size:45px;
+}
+
+h1{
+    text-align:center;
+    color:#1565C0;
+    margin:10px 0;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#333;
+    font-weight:500;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+select:focus{
+    border-color:#1565C0;
+    box-shadow:0 0 5px rgba(21,101,192,.4);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#1565C0;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#0D47A1;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+    color:#555;
+}
+
+.login-link a{
+    color:#1565C0;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:500px){
+
+.register-box{
+    padding:25px;
+}
+
+h1{
+    font-size:28px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="register-box">
+
+<div class="logo">🎓</div>
+
+<h1>Create Account</h1>
+
+<p class="subtitle">Join JEE Preparation Portal</p>
+
+<form>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email" required>
+</div>
+
+<div class="input-group">
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter mobile number" required>
+</div>
+
+<div class="input-group">
+<label>Class</label>
+<select required>
+<option value="">Select Class</option>
+<option>Class 11</option>
+<option>Class 12</option>
+<option>Dropper</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Target Exam</label>
+<select required>
+<option value="">Select Exam</option>
+<option>JEE Main</option>
+<option>JEE Advanced</option>
+<option>Both</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" placeholder="Create password" required>
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password" placeholder="Confirm password" required>
+</div>
+
+<button type="submit">
+Create Account
+</button>
+
+</form>
+
+<div class="login-link">
+Already have an account?
+<a href="login.html">Login</a>
+</div>
+
+</div>
+
+</body>
+</html>

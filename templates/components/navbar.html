@@ -1,0 +1,54 @@
+<header>
+  <nav class="navbar">
+
+    <div class="logo">Vector<span>Educator</span></div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Faculty</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Admission</a></li>
+    </ul>
+
+    <div class="auth-btn">
+      <a href="#">Login / Register</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-book"></i> Courses</a>
+    <a href="#"><i class="fas fa-users"></i> Faculty</a>
+    <a href="#"><i class="fas fa-phone"></i> Contact</a>
+    <a href="#"><i class="fas fa-clipboard-check"></i> Admission</a>
+
+    <div class="mob-search">
+      <input type="text" placeholder="Search courses...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-apply"><i class="fas fa-file-alt"></i> Apply Now</button>
+    </div>
+
+    <div class="mob-auth">
+      <a href="#">Login / Register</a>
+    </div>
+  </div>
+
+</header>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function () {
+    this.classList.toggle('active');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
