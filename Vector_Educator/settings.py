@@ -10,11 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-import os
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-t)c@u&69+&@^@ps))^s@m-k5=e_!!x^bq@&h%r7wcnsv8%btec')
+SECRET_KEY = 'django-insecure-t)c@u&69+&@^@ps))^s@m-k5=e_!!x^bq@&h%r7wcnsv8%btec'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.vectoreducator.com', os.getenv('ALLOWED_HOST', 'localhost')]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -57,10 +53,6 @@ INSTALLED_APPS = [
     'faculty',
     'about',
     'jee',
-    'neet',
-    'mycourse',
-    'dashboard',
-    'fees',
 ]
 
 
@@ -99,8 +91,13 @@ WSGI_APPLICATION = 'Vector_Educator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "Vector_Educator", 
+        'USER': 'postgres',
+        'PASSWORD': 'postgres123',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+
     }
 }
 
@@ -139,7 +136,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
