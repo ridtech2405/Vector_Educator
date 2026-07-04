@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET Edge - Premium Study Workspace</title>
+  <!-- SEO tags -->
+  <meta name="description" content="NEET Edge is a professional, premium student preparation workspace offering focus timers, mock tests, AI doubts solver, and progress planner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h1>NEET Edge</h1>
+          <p>Premium Study Workspace</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="active" data-view="dashboard" onclick="showView('dashboard')"><i class="fa-solid fa-gauge-high"></i> <span>Dashboard</span></button>
+        <button data-view="courses" onclick="showView('courses')"><i class="fa-solid fa-book-open"></i> <span>Courses</span></button>
+        <button data-view="tests" onclick="showView('tests')"><i class="fa-solid fa-pen-to-square"></i> <span>Mock Tests</span></button>
+        <button data-view="notes" onclick="showView('notes')"><i class="fa-solid fa-note-sticky"></i> <span>Notes</span></button>
+        <button data-view="rank" onclick="showView('rank')"><i class="fa-solid fa-trophy"></i> <span>Rankings</span></button>
+        <button data-view="ai" onclick="showView('ai')"><i class="fa-solid fa-robot"></i> <span>AI Doubt Solver</span></button>
+        <button data-view="planner" onclick="showView('planner')"><i class="fa-solid fa-calendar-check"></i> <span>Study Planner</span></button>
+        <button data-view="settings" onclick="showView('settings')"><i class="fa-solid fa-gear"></i> <span>Settings</span></button>
+      </nav>
+      <div class="sidebar-card">
+        <div class="streak"><i class="fa-solid fa-fire"></i> 12-day streak</div>
+        <small style="color: var(--text-muted); line-height: 1.5; font-size: 11px;">
+          Strong consistency matters more than random intensity. Keep going!
+        </small>
+      </div>
+    </aside>
+    <!-- Main Section -->
+    <main class="main">
+      <!-- Top Header Bar -->
+      <div class="topbar">
+        <div class="title">
+          <h2 id="pageTitle">Dashboard</h2>
+          <p>NEET 2026 preparation workspace</p>
+        </div>
+        <div class="top-actions">
+          <div class="pill" id="topStreak"><i class="fa-solid fa-fire"></i> 12-day streak</div>
+          <button class="btn btn-ghost" onclick="showView('dashboard')"><i class="fa-solid fa-house"></i> Home</button>
+          <button class="btn btn-primary" onclick="handleSetDailyGoal()">Set Daily Goal</button>
+        </div>
+      </div>
+      <!-- VIEW 1: Dashboard View -->
+      <section id="dashboardView">
+        <div class="grid stats">
+          <!-- Populated by app.js -->
+        </div>
+        <div class="banner">
+          <div class="hero">
+            <div>
+              <h3>Clean, focused, professional NEET study space</h3>
+              <p>
+                Welcome to your comprehensive dashboard. Boost your speed with structured mock test drills, track your focus minutes with the Pomodoro timer, manage custom subject notes, and ask our integrated doubt solver.
+              </p>
+            </div>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="showView('tests')"><i class="fa-solid fa-play"></i> Start Mock Test</button>
+              <button class="btn btn-ghost" onclick="showView('planner')">Study Planner</button>
+              <button class="btn btn-ghost" onclick="showView('ai')">Ask AI Doubt Solver</button>
+            </div>
+            <div class="hero-badges">
+              <span class="tag">NEET Physics</span>
+              <span class="tag">Chemistry Revision</span>
+              <span class="tag">Biology Mastery</span>
+              <span class="tag">Previous Year Papers</span>
+            </div>
+          </div>
+          <!-- Focus Pomodoro timer -->
+          <div class="focus-card">
+            <div class="focus-head">
+              <div>
+                <h4>Focus Session</h4>
+                <p>Pomodoro style study tracker</p>
+              </div>
+              <span id="targetHoursTag">Today target: 4.5h</span>
+            </div>
+            <div class="timer" id="timerDisplay">00:00:00</div>
+            <div class="progress-wrap">
+              <div class="progress-label"><span>Preparation progress</span><span id="progressText">86%</span></div>
+              <div class="bar"><div class="fill" id="progressFill"></div></div>
+            </div>
+            <div class="hero-actions" style="margin-top: 10px; margin-bottom: 0;">
+              <button class="btn btn-primary" id="timerStart">Start</button>
+              <button class="btn btn-ghost" id="timerPause" disabled>Pause</button>
+              <button class="btn btn-ghost" id="timerReset">Reset</button>
+            </div>
+          </div>
+        </div>
+        <!-- Subject Overview Cards -->
+        <div class="grid cards">
+          <div class="card">
+            <div class="card-top">
+              <div class="ico"><i class="fa-solid fa-flask-vial"></i></div>
+              <span class="tag">Chemistry strong</span>
+            </div>
+            <h4>Topic completion</h4>
+            <p>Balanced focus on organic, inorganic, and physical chemistry with chapter-wise tracking.</p>
+            <div class="mini"><span>90%</span><small>2 chapters left</small></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <div class="ico"><i class="fa-solid fa-dna"></i></div>
+              <span class="tag">Biology priority</span>
+            </div>
+            <h4>Revision cycles</h4>
+            <p>Built-in revision reminders for NCERT-based biology and high-yield questions.</p>
+            <div class="mini"><span>95%</span><small>1 chapter left</small></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <div class="ico"><i class="fa-solid fa-atom"></i></div>
+              <span class="tag">Physics practice</span>
+            </div>
+            <h4>Question accuracy</h4>
+            <p>Track practice accuracy and improve weak mechanics, electrostatics, and modern physics.</p>
+            <div class="mini"><span>78%</span><small>Needs drill</small></div>
+          </div>
+        </div>
+        <!-- Subject Progress Bar Section -->
+        <div class="section">
+          <div class="section-head">
+            <div>
+              <h3>Subject Progress</h3>
+              <p>Subject-wise progress with dynamic simulation</p>
+            </div>
+            <button class="btn btn-ghost" onclick="handleProgressSimulate()">Simulate +2%</button>
+          </div>
+          <div class="grid subject-grid">
+            <div class="subject">
+              <h4>Physics <small>70%</small></h4>
+              <div class="sub-bar"><div class="sub-fill" style="width: 70%"></div></div>
+              <div class="meta"><span>3 chapters left</span><span>Practice</span></div>
+            </div>
+            <div class="subject">
+              <h4>Chemistry <small>90%</small></h4>
+              <div class="sub-bar"><div class="sub-fill green" style="width: 90%"></div></div>
+              <div class="meta"><span>2 chapters left</span><span>Revision</span></div>
+            </div>
+            <div class="subject">
+              <h4>Biology <small>95%</small></h4>
+              <div class="sub-bar"><div class="sub-fill blue" style="width: 95%"></div></div>
+              <div class="meta"><span>1 chapter left</span><span>Nearly done</span></div>
+            </div>
+            <div class="subject">
+              <h4>Zoology <small>78%</small></h4>
+              <div class="sub-bar"><div class="sub-fill purple" style="width: 78%"></div></div>
+              <div class="meta"><span>4 chapters left</span><span>Ongoing</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Recent Activity Logs Table -->
+        <div class="section">
+          <div class="table-card">
+            <div class="section-head">
+              <div>
+                <h3>Recent Activity Logs</h3>
+                <p>Track your last 6 study and drill sessions</p>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Activity Description</th>
+                  <th>Subject</th>
+                  <th>Status</th>
+                  <th>Test Score</th>
+                </tr>
+              </thead>
+              <tbody id="activitiesTableBody">
+                <!-- Loaded from app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 2: Courses View -->
+      <section id="coursesView" class="hidden feature-grid grid">
+        <div class="feature-card">
+          <h4>Course Curriculum</h4>
+          <p>Detailed syllabus overview according to latest NEET parameters.</p>
+          <div class="list">
+            <div class="item">
+              <div><strong>Physics Mechanics & Electrostatics</strong><span>12 chapters • 80% complete</span></div>
+              <button class="btn btn-ghost" onclick="alert('Launching physics module lectures!')">Study</button>
+            </div>
+            <div class="item">
+              <div><strong>Chemistry Organic & Inorganic High Yield</strong><span>10 chapters • 90% complete</span></div>
+              <button class="btn btn-ghost" onclick="alert('Launching chemistry module lectures!')">Study</button>
+            </div>
+            <div class="item">
+              <div><strong>Biology Genetics & Physiology</strong><span>14 chapters • 95% complete</span></div>
+              <button class="btn btn-ghost" onclick="alert('Launching biology module lectures!')">Study</button>
+            </div>
+            <div class="item">
+              <div><strong>Zoology Animal Kingdom & Evolution</strong><span>8 chapters • 78% complete</span></div>
+              <button class="btn btn-ghost" onclick="alert('Launching zoology module lectures!')">Study</button>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card">
+          <h4>Syllabus Analysis</h4>
+          <p>Target topics based on NEET weightage.</p>
+          <div class="list">
+            <div class="item"><div><strong>Mechanics</strong><span>High Weightage</span></div><span class="status s-warn">Revise</span></div>
+            <div class="item"><div><strong>Organic Compounds</strong><span>Medium Weightage</span></div><span class="status s-blue">In Progress</span></div>
+            <div class="item"><div><strong>Genetics</strong><span>Critical Weightage</span></div><span class="status s-purple">Perfected</span></div>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 3: Mock Tests View -->
+      <section id="testsView" class="hidden">
+        <!-- Mock Test Card Selection Screen -->
+        <div id="testSelectionCard" class="feature-grid grid">
+          <div class="feature-card">
+            <h4>Mock Test Center</h4>
+            <p>Pick a subject practice test. Completing tests improves your rank dynamically.</p>
+            <div class="list" style="margin-top:20px;">
+              <div class="item">
+                <div>
+                  <strong>Physics Speed Drill</strong>
+                  <span>3 questions • Photoelectric effect & kinematics</span>
+                </div>
+                <button class="btn btn-primary" onclick="startMockTest('physics')">Start Drill</button>
+              </div>
+              <div class="item">
+                <div>
+                  <strong>Chemistry Core Test</strong>
+                  <span>3 questions • Nucleophiles & coordination complex</span>
+                </div>
+                <button class="btn btn-primary" onclick="startMockTest('chemistry')">Start Drill</button>
+              </div>
+              <div class="item">
+                <div>
+                  <strong>Biology NCERT Master</strong>
+                  <span>3 questions • Hormones, translation & microsporangium</span>
+                </div>
+                <button class="btn btn-primary" onclick="startMockTest('biology')">Start Drill</button>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <h4>Daily Speed Challenge</h4>
+            <p>Solve MCQs within time to boost competitive speed.</p>
+            <div class="list">
+              <div class="item"><div><strong>Accuracy target</strong><span>Maintain above 80%</span></div><span class="status s-good">On track</span></div>
+              <div class="item"><div><strong>Speed target</strong><span>45s per MCQ</span></div><span class="status s-blue">Good</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Mock Test Player Panel -->
+        <div id="testPlayerCard" class="feature-card hidden test-panel">
+          <div class="focus-head">
+            <div>
+              <h4 id="testSubjectTitle">Subject Test</h4>
+              <p id="testProgressLabel">Question 1 of 3</p>
+            </div>
+            <button class="btn btn-danger" onclick="exitMockTest()">Quit Drill</button>
+          </div>
+          <div id="testQuestionContainer" class="question-box">
+            <!-- Loaded by app.js -->
+          </div>
+          <div class="test-controls">
+            <button class="btn btn-ghost" id="prevQuestionBtn" onclick="prevMockQuestion()">Previous</button>
+            <button class="btn btn-primary" id="nextQuestionBtn" onclick="nextMockQuestion()">Next Question</button>
+          </div>
+        </div>
+        <!-- Mock Test Score Report Card -->
+        <div id="testScoreReportCard" class="feature-card hidden text-center" style="max-width: 600px; margin: 0 auto;">
+          <div class="test-score-card">
+            <h3>Drill Completed!</h3>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Your performance has been submitted and computed to update dashboard metrics and improve mock rankings.</p>
+            <h2 id="scoreResultText" style="font-size: 38px; font-weight: 800; margin-bottom: 20px;">0 / 3</h2>
+            <button class="btn btn-primary" onclick="exitMockTest()">Return to Test Center</button>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 4: Notes View -->
+      <section id="notesView" class="hidden">
+        <div class="notes-grid">
+          <!-- Notes List -->
+          <div class="feature-card">
+            <div class="focus-head" style="margin-bottom: 12px;">
+              <div>
+                <h4>Saved Notes</h4>
+                <p>Create and edit formula cheat-sheets</p>
+              </div>
+              <button class="btn btn-primary" onclick="handleCreateNewNote()"><i class="fa-solid fa-plus"></i> New Note</button>
+            </div>
+            <div class="list" id="notesListContainer">
+              <!-- Loaded from app.js -->
+            </div>
+          </div>
+          <!-- Note Content Editor -->
+          <div class="feature-card notes-editor">
+            <h4>Edit Note</h4>
+            <div class="input-row" style="margin-bottom: 12px;">
+              <input type="text" id="noteTitleInput" placeholder="Note Title...">
+              <button class="btn btn-primary" onclick="handleSaveNote()"><i class="fa-solid fa-floppy-disk"></i> Save Note</button>
+            </div>
+            <textarea id="noteContentTextarea" placeholder="Write down formula highlights, steps or NCERT references here..."></textarea>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 5: Rankings Leaderboard View -->
+      <section id="rankView" class="hidden feature-grid grid">
+        <div class="feature-card">
+          <h4>Batch Rankings</h4>
+          <p>See where you stand relative to the 50,000 active students.</p>
+          <div class="list" style="margin-top: 20px;">
+            <div class="item">
+              <div><strong>Your Active Rank</strong><span>Rankings calculated based on recent drills</span></div>
+              <span class="status s-good">Top 1%</span>
+            </div>
+            <div class="item">
+              <div><strong>Mock Tests Finished</strong><span>Complete drills in Tests tab</span></div>
+              <span class="status s-blue">Consistent</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card">
+          <h4>National Leaderboard</h4>
+          <div class="list">
+            <div class="leaderboard-row"><div class="leaderboard-rank">1</div><div><strong>Riya Sharma</strong></div><span class="status s-good">98.5%</span></div>
+            <div class="leaderboard-row"><div class="leaderboard-rank">2</div><div><strong>Arjun Mehta</strong></div><span class="status s-blue">97.2%</span></div>
+            <div class="leaderboard-row"><div class="leaderboard-rank">3</div><div><strong>Priya Patel</strong></div><span class="status s-purple">96.8%</span></div>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 6: AI Doubt Solver Chat View -->
+      <section id="aiView" class="hidden feature-card">
+        <div class="chat-container">
+          <div>
+            <h4>AI Doubt Solver</h4>
+            <p style="color:var(--text-muted); font-size:13px; margin-bottom: 12px;">Ask any NEET related query about SN1/SN2, Photosynthesis, Ohm's law, Mitosis/Meiosis to get answers immediately.</p>
+          </div>
+          
+          <div class="chat-box" id="aiChatContainer">
+            <div class="chat-msg bot">
+              <span class="sender">NEET Edge AI</span>
+              <div>Hello! Type your NEET question below and I will extract the key high-yield NCERT points for you.</div>
+            </div>
+          </div>
+          <div class="input-row">
+            <input type="text" id="aiQueryInput" placeholder="Type your NEET question (e.g. SN1 vs SN2)..." onkeydown="if(event.key==='Enter') handleSendAiMessage()">
+            <button class="btn btn-primary" onclick="handleSendAiMessage()"><i class="fa-solid fa-paper-plane"></i> Ask AI</button>
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 7: Study Planner View -->
+      <section id="plannerView" class="hidden feature-grid grid">
+        <div class="feature-card">
+          <h4>Add Focus Task</h4>
+          <form onsubmit="handleAddTask(event)">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <input type="text" id="taskTitle" placeholder="Task Name (e.g. Chapter 4 Practice)..." required style="width:100%; background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:12px; border-radius:8px; color:#fff;">
+              <div style="display: flex; gap: 10px;">
+                <input type="text" id="taskDuration" placeholder="Duration (e.g. 1.5h)" required style="flex:1; background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:12px; border-radius:8px; color:#fff;">
+                <select id="taskSubject" style="flex:1; background:#0b1528; border:1px solid var(--border); padding:12px; border-radius:8px; color:#fff;">
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Zoology">Zoology</option>
+                  <option value="All">All Subjects</option>
+                </select>
+                <select id="taskPriority" style="flex:1; background:#0b1528; border:1px solid var(--border); padding:12px; border-radius:8px; color:#fff;">
+                  <option value="high">High Priority</option>
+                  <option value="medium">Medium Priority</option>
+                  <option value="low">Low Priority</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">Create Task</button>
+            </div>
+          </form>
+        </div>
+        <div class="feature-card">
+          <h4>Planner Tasks Checklist</h4>
+          <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Click active status to cycle through status changes (NEXT -> NOW -> DONE -> LATER).</p>
+          <div class="list" id="plannerListContainer">
+            <!-- Loaded from app.js -->
+          </div>
+        </div>
+      </section>
+      <!-- VIEW 8: Settings View -->
+      <section id="settingsView" class="hidden feature-card" style="max-width: 600px;">
+        <h4>Settings & Preferences</h4>
+        <p style="margin-bottom:20px;">Adjust your active parameters and profile info.</p>
+        <div class="list">
+          <div class="item">
+            <div><strong>Study Profile Name</strong><span>Dinesh Kumar</span></div>
+            <button class="btn btn-ghost" onclick="alert('Profile editing requires connection.')">Edit Name</button>
+          </div>
+          <div class="item">
+            <div><strong>Push Notifications</strong><span>Reminders for revisions & drills</span></div>
+            <button class="btn btn-ghost" onclick="toggleSetting('notifications')">Toggle Settings</button>
+          </div>
+          <div class="item">
+            <div><strong>Aesthetic Glow Effects</strong><span>Toggle ambient dashboard gradient colors</span></div>
+            <button class="btn btn-ghost" onclick="toggleSetting('darkMode')">Toggle Glows</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
