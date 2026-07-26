@@ -1,5 +1,8 @@
-// app.js - State, Event Handlers and Mock Engine for NEET Edge Dashboard
-// 1. App State & Local Storage
+console.log("JavaScript Connected Successfully");
+
+// Tumhara baaki code
+const DEFAULT_STATE = {
+};
 const DEFAULT_STATE = {
   activeTab: 'dashboard',
   streak: 12,

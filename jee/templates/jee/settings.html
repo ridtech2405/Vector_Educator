@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings | JEE Preparation Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Header */
+
+header{
+    background:#0D47A1;
+    color:#fff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    font-size:28px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#FFD54F;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.title{
+    text-align:center;
+    color:#0D47A1;
+    margin-bottom:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#1565C0;
+    margin-bottom:20px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.switch{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:15px 0;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:#fff;
+    font-size:15px;
+}
+
+.save{
+    background:#1565C0;
+}
+
+.save:hover{
+    background:#0D47A1;
+}
+
+.logout{
+    background:#FB8C00;
+}
+
+.delete{
+    background:#E53935;
+}
+
+footer{
+    background:#0D47A1;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>⚙ Settings</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="profile.html">Profile</a>
+<a href="performance.html">Performance</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1 class="title">Account Settings</h1>
+
+<!-- Profile -->
+
+<div class="card">
+
+<h3>Profile Settings</h3>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" value="Sourabh Thakre">
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" value="sourabh@email.com">
+</div>
+
+<div class="input-group">
+<label>Mobile Number</label>
+<input type="text" value="+91 9876543210">
+</div>
+
+<button class="save">Save Changes</button>
+
+</div>
+
+<!-- Password -->
+
+<div class="card">
+
+<h3>Change Password</h3>
+
+<div class="input-group">
+<label>Current Password</label>
+<input type="password">
+</div>
+
+<div class="input-group">
+<label>New Password</label>
+<input type="password">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password">
+</div>
+
+<button class="save">Update Password</button>
+
+</div>
+
+<!-- Preferences -->
+
+<div class="card">
+
+<h3>Preferences</h3>
+
+<div class="input-group">
+
+<label>Language</label>
+
+<select>
+
+<option>English</option>
+
+<option>Hindi</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Theme</label>
+
+<select>
+
+<option>Light</option>
+
+<option>Dark</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- Notifications -->
+
+<div class="card">
+
+<h3>Notification Settings</h3>
+
+<div class="switch">
+
+<span>Email Notifications</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="switch">
+
+<span>SMS Notifications</span>
+
+<input type="checkbox">
+
+</div>
+
+<div class="switch">
+
+<span>Mock Test Reminder</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="switch">
+
+<span>Daily Study Reminder</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+</div>
+
+<!-- Account -->
+
+<div class="card">
+
+<h3>Account Actions</h3>
+
+<button class="logout">Logout</button>
+
+<button class="delete">Delete Account</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 JEE Preparation Portal | Settings</p>
+
+</footer>
+
+</body>
+</html>

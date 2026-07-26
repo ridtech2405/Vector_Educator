@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JEE Preparation Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+/* Header */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#0D47A1;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:white;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.login{
+background:#FF9800;
+padding:10px 20px;
+border-radius:8px;
+}
+
+.login:hover{
+background:#E65100;
+color:white;
+}
+
+/* Hero */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:70px 8%;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.3;
+color:#0D47A1;
+}
+
+.hero-text span{
+color:#FF9800;
+}
+
+.hero-text p{
+margin-top:20px;
+font-size:18px;
+color:#555;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:35px;
+}
+
+.btn1{
+
+display:inline-block;
+padding:15px 35px;
+background:#1565C0;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-right:15px;
+transition:.3s;
+
+}
+
+.btn2{
+
+display:inline-block;
+padding:15px 35px;
+background:#FF9800;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+
+}
+
+.btn1:hover{
+background:#0D47A1;
+}
+
+.btn2:hover{
+background:#E65100;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:90%;
+max-width:500px;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:10px;
+}
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-image img{
+width:75%;
+margin-bottom:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+🎓 JEE Portal
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">Home</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="mock test.html">Mock Test</a>
+
+<a href="puq.html">PYQ</a>
+
+<a href="performance.html">Performance</a>
+
+<a href="profile.html">Profile</a>
+
+<a href="settings.html">Settings</a>
+
+<a href="#" class="login">Login</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Crack <span>JEE Main</span><br>
+
+& <span>JEE Advanced</span>
+
+With Smart Preparation
+
+</h1>
+
+<p>
+
+Prepare with India's Best JEE Learning Platform.
+Study Notes, Mock Tests, Previous Year Papers,
+Performance Analytics and Daily Practice Questions.
+
+</p>
+
+<div class="buttons">
+
+<a href="register.html" class="btn1">
+
+Get Started
+
+</a>
+
+<a href="mock test.html" class="btn2">
+
+Mock Test
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+
+</div>
+
+</section>
+
+<script>
+
+console.log("JEE Portal Loaded Successfully");
+
+</script>
+
+</body>
+</html>

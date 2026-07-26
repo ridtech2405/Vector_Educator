@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Header */
+
+header{
+    background:#0d47a1;
+    color:#fff;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2{
+    font-size:28px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* Profile Section */
+
+.profile-container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.cover{
+    height:220px;
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+}
+
+.profile{
+    text-align:center;
+    margin-top:-70px;
+    padding-bottom:30px;
+}
+
+.profile img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:6px solid #fff;
+    object-fit:cover;
+}
+
+.profile h1{
+    margin-top:15px;
+    color:#0d47a1;
+}
+
+.profile p{
+    color:#666;
+}
+
+/* Info */
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.box{
+    background:#f4f6fb;
+    border-radius:10px;
+    padding:20px;
+}
+
+.box h3{
+    color:#1565c0;
+    margin-bottom:10px;
+}
+
+.box p{
+    color:#555;
+    margin:8px 0;
+}
+
+/* Statistics */
+
+.stats{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+
+.card h2{
+    color:#1565c0;
+}
+
+.card h1{
+    margin-top:10px;
+    color:#0d47a1;
+    font-size:40px;
+}
+
+/* Buttons */
+
+.buttons{
+    text-align:center;
+    margin:30px;
+}
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:8px;
+    background:#1565c0;
+    color:white;
+    font-size:16px;
+    margin:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px;
+}
+
+.profile img{
+    width:120px;
+    height:120px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>👤 Student Profile</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="mocktest.html">Mock Test</a>
+<a href="performance.html">Performance</a>
+
+</nav>
+
+</header>
+
+<div class="profile-container">
+
+<div class="cover"></div>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/200" alt="Profile">
+
+<h1>Sourabh Thakre</h1>
+
+<p>JEE Main & Advanced Aspirant</p>
+
+</div>
+
+<div class="info">
+
+<div class="box">
+
+<h3>Personal Information</h3>
+
+<p><strong>Name :</strong> Sourabh Thakre</p>
+
+<p><strong>Email :</strong> sourabh@email.com</p>
+
+<p><strong>Phone :</strong> +91 9876543210</p>
+
+<p><strong>City :</strong> Bhopal</p>
+
+</div>
+
+<div class="box">
+
+<h3>Academic Information</h3>
+
+<p><strong>Class :</strong> 12th</p>
+
+<p><strong>Target :</strong> IIT JEE Advanced</p>
+
+<p><strong>School :</strong> ABC School</p>
+
+<p><strong>Batch :</strong> 2027</p>
+
+</div>
+
+<div class="box">
+
+<h3>Account Details</h3>
+
+<p><strong>Membership :</strong> Premium</p>
+
+<p><strong>Joined :</strong> Jan 2026</p>
+
+<p><strong>Status :</strong> Active</p>
+
+<p><strong>Language :</strong> English</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h2>Tests Completed</h2>
+<h1>35</h1>
+</div>
+
+<div class="card">
+<h2>Average Score</h2>
+<h1>87%</h1>
+</div>
+
+<div class="card">
+<h2>National Rank</h2>
+<h1>145</h1>
+</div>
+
+<div class="card">
+<h2>Study Hours</h2>
+<h1>420</h1>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button>Edit Profile</button>
+
+<button>Change Password</button>
+
+<button>Logout</button>
+
+</div>
+
+<footer>
+
+<p>© 2026 JEE Preparation Portal | Student Profile</p>
+
+</footer>
+
+</body>
+</html>

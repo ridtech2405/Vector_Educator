@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE Mock Test</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+/* Header */
+
+header{
+background:#0D47A1;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+/* Banner */
+
+.banner{
+background:linear-gradient(135deg,#1565C0,#42A5F5);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.banner h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+/* Test Cards */
+
+.container{
+width:90%;
+margin:50px auto;
+}
+
+.title{
+text-align:center;
+font-size:35px;
+color:#0D47A1;
+margin-bottom:35px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#1565C0;
+margin-bottom:15px;
+}
+
+.card p{
+margin:10px 0;
+color:#555;
+}
+
+button{
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+background:#1565C0;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0D47A1;
+}
+
+/* Instructions */
+
+.instructions{
+width:90%;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.instructions h2{
+color:#1565C0;
+margin-bottom:20px;
+}
+
+.instructions ul{
+padding-left:20px;
+}
+
+.instructions li{
+margin:12px 0;
+}
+
+/* Footer */
+
+footer{
+margin-top:60px;
+background:#0D47A1;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.banner h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>🎓 JEE Portal</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="performance.html">Performance</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>JEE Mock Tests</h1>
+
+<p>Practice Like the Real Examination</p>
+
+</section>
+
+<div class="container">
+
+<h2 class="title">Available Mock Tests</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>JEE Main Mock Test 1</h3>
+
+<p>Questions : 90</p>
+
+<p>Duration : 3 Hours</p>
+
+<p>Total Marks : 300</p>
+
+<button>Start Test</button>
+
+</div>
+
+<div class="card">
+
+<h3>JEE Main Mock Test 2</h3>
+
+<p>Questions : 90</p>
+
+<p>Duration : 3 Hours</p>
+
+<p>Total Marks : 300</p>
+
+<button>Start Test</button>
+
+</div>
+
+<div class="card">
+
+<h3>JEE Advanced Mock Test</h3>
+
+<p>Questions : 54</p>
+
+<p>Duration : 3 Hours</p>
+
+<p>Total Marks : 360</p>
+
+<button>Start Test</button>
+
+</div>
+
+<div class="card">
+
+<h3>Physics Mock Test</h3>
+
+<p>Questions : 30</p>
+
+<p>Duration : 60 Minutes</p>
+
+<p>Total Marks : 120</p>
+
+<button>Start Test</button>
+
+</div>
+
+<div class="card">
+
+<h3>Chemistry Mock Test</h3>
+
+<p>Questions : 30</p>
+
+<p>Duration : 60 Minutes</p>
+
+<p>Total Marks : 120</p>
+
+<button>Start Test</button>
+
+</div>
+
+<div class="card">
+
+<h3>Mathematics Mock Test</h3>
+
+<p>Questions : 30</p>
+
+<p>Duration : 60 Minutes</p>
+
+<p>Total Marks : 120</p>
+
+<button>Start Test</button>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="instructions">
+
+<h2>Exam Instructions</h2>
+
+<ul>
+
+<li>Read every question carefully before answering.</li>
+
+<li>Each question carries positive and negative marking as per JEE pattern.</li>
+
+<li>Do not refresh the page during the examination.</li>
+
+<li>Use the question palette to navigate between questions.</li>
+
+<li>Submit the test before the timer ends.</li>
+
+<li>Your result will be generated instantly after submission.</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>© 2026 JEE Preparation Portal | Mock Test</p>
+
+</footer>
+
+</body>
+</html>

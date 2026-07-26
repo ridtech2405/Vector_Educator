@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performance Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+/* Header */
+
+header{
+background:#0d47a1;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+/* Banner */
+
+.banner{
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.banner h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+/* Cards */
+
+.cards{
+width:90%;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.card h3{
+color:#1565c0;
+margin-bottom:10px;
+}
+
+.card h1{
+font-size:38px;
+color:#0d47a1;
+}
+
+.card p{
+margin-top:10px;
+color:#666;
+}
+
+/* Subject Section */
+
+.subject{
+width:90%;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.subject h2{
+text-align:center;
+margin-bottom:25px;
+color:#0d47a1;
+}
+
+.progress-box{
+margin-bottom:25px;
+}
+
+.progress-box h4{
+margin-bottom:8px;
+}
+
+.progress{
+width:100%;
+height:20px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar1{
+height:100%;
+width:88%;
+background:#4caf50;
+}
+
+.bar2{
+height:100%;
+width:80%;
+background:#ff9800;
+}
+
+.bar3{
+height:100%;
+width:92%;
+background:#2196f3;
+}
+
+/* Table */
+
+.table-section{
+width:90%;
+margin:40px auto;
+}
+
+.table-section h2{
+text-align:center;
+margin-bottom:20px;
+color:#0d47a1;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+th{
+background:#1565c0;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+/* Rank */
+
+.rank{
+width:90%;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.rank-box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.rank-box h2{
+color:#0d47a1;
+margin-bottom:10px;
+}
+
+.rank-box h1{
+font-size:45px;
+color:#2e7d32;
+}
+
+/* Footer */
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.banner h1{
+font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>📊 Performance Dashboard</h2>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Dashboard</a>
+<a href="#">Mock Test</a>
+<a href="#">Profile</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Your Performance</h1>
+
+<p>Track your preparation and improve every day.</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>Overall Score</h3>
+<h1>89%</h1>
+<p>Excellent Performance</p>
+</div>
+
+<div class="card">
+<h3>Total Tests</h3>
+<h1>28</h1>
+<p>Completed Successfully</p>
+</div>
+
+<div class="card">
+<h3>Average Marks</h3>
+<h1>242</h1>
+<p>Out of 300</p>
+</div>
+
+<div class="card">
+<h3>Overall Rank</h3>
+<h1>145</h1>
+<p>Among All Students</p>
+</div>
+
+</section>
+
+<section class="subject">
+
+<h2>Subject Wise Performance</h2>
+
+<div class="progress-box">
+<h4>Physics - 88%</h4>
+<div class="progress">
+<div class="bar1"></div>
+</div>
+</div>
+
+<div class="progress-box">
+<h4>Chemistry - 80%</h4>
+<div class="progress">
+<div class="bar2"></div>
+</div>
+</div>
+
+<div class="progress-box">
+<h4>Mathematics - 92%</h4>
+<div class="progress">
+<div class="bar3"></div>
+</div>
+</div>
+
+</section>
+
+<section class="table-section">
+
+<h2>Recent Mock Test Results</h2>
+
+<table>
+
+<tr>
+<th>Test Name</th>
+<th>Marks</th>
+<th>Percentage</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Mock Test 1</td>
+<td>250 / 300</td>
+<td>83%</td>
+<td>Excellent</td>
+</tr>
+
+<tr>
+<td>Mock Test 2</td>
+<td>238 / 300</td>
+<td>79%</td>
+<td>Good</td>
+</tr>
+
+<tr>
+<td>Advanced Test</td>
+<td>162 / 180</td>
+<td>90%</td>
+<td>Outstanding</td>
+</tr>
+
+<tr>
+<td>Physics Test</td>
+<td>110 / 120</td>
+<td>91%</td>
+<td>Excellent</td>
+</tr>
+
+</table>
+
+</section>
+
+<section class="rank">
+
+<div class="rank-box">
+
+<h2>State Rank</h2>
+
+<h1>45</h1>
+
+</div>
+
+<div class="rank-box">
+
+<h2>National Rank</h2>
+
+<h1>145</h1>
+
+</div>
+
+<div class="rank-box">
+
+<h2>Accuracy</h2>
+
+<h1>94%</h1>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 JEE Preparation Portal | Performance Dashboard</p>
+
+</footer>
+
+</body>
+</html>

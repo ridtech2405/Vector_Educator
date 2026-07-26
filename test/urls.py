@@ -1,0 +1,8 @@
+from django.urls import path
+from . import views
+
+app_name = 'test'
+
+urlpatterns = [
+    # Add your test URL patterns here
+]
